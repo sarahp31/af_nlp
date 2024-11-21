@@ -136,7 +136,7 @@ def get_possible_jobs(resume_text, personal_interests):
         return "Não foi possível gerar recomendações de carreiras no momento."
 
 
-def get_user_profile_embedding(resume_text, personal_interests, alpha=0.6, beta=0.4):
+def get_user_profile_embedding(resume_text, personal_interests, alpha=0.55, beta=0.44):
     """
     Gera o embedding do perfil do usuário combinando o currículo e os interesses pessoais.
     Os pesos alpha e beta determinam a influência de cada componente.
@@ -156,7 +156,7 @@ def get_user_profile_embedding(resume_text, personal_interests, alpha=0.6, beta=
     )
     return user_embedding
 
-def get_recommendations(user_embedding, threshold=0.33, top_n=3500, max_jobs_per_company=5, min_similarity_diff=0.005):
+def get_recommendations(user_embedding, threshold=0.20, top_n=3500, max_jobs_per_company=10, min_similarity_diff=0.005):
     """
     Adiciona um filtro para evitar jobs muito semelhantes dentro da mesma empresa.
     """
@@ -190,7 +190,6 @@ def get_recommendations(user_embedding, threshold=0.33, top_n=3500, max_jobs_per
     if len(indices) == 0:
         return []
 
-    # Prepare the results with company diversity
     results = []
     company_count = {}  # Track the number of jobs added per company
     selected_similarities = {}  # Track last similarity for each company
@@ -206,7 +205,6 @@ def get_recommendations(user_embedding, threshold=0.33, top_n=3500, max_jobs_per
         if company in selected_similarities and abs(sim - selected_similarities[company]) < min_similarity_diff:
             continue
 
-        # Add job to results
         job = {
             "job_id": data["job_id"][idx],
             "job_title": data["job_title"][idx],
