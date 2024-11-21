@@ -136,7 +136,7 @@ def get_possible_jobs(resume_text, personal_interests):
         return "Não foi possível gerar recomendações de carreiras no momento."
 
 
-def get_user_profile_embedding(resume_text, personal_interests, alpha=0.6, beta=0.4):
+def get_user_profile_embedding(resume_text, personal_interests, alpha=0.55, beta=0.44):
     """
     Gera o embedding do perfil do usuário combinando o currículo e os interesses pessoais.
     Os pesos alpha e beta determinam a influência de cada componente.
