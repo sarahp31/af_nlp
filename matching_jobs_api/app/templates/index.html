@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Recomendação de Vagas</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Recomendação de Vagas Não Óbvias</h1>
+    <form id="recommendation-form">
+        <label for="resume">Insira o texto do seu currículo:</label><br>
+        <textarea id="resume" name="resume" rows="10" cols="80" required></textarea><br><br>
+    
+        <label for="interests">Quais são seus interesses pessoais ou hobbies?</label><br>
+        <textarea id="interests" name="interests" rows="9" cols="80" required></textarea><br><br>
+    
+        <input type="submit" value="Obter Recomendações">
+    </form>
+    
+    <script>
+        document.getElementById('recommendation-form').addEventListener('submit', function(e) {
+            e.preventDefault(); // Previne o comportamento padrão do formulário
+    
+            const resume = document.getElementById('resume').value;
+            const interests = document.getElementById('interests').value;
+    
+            fetch('/query', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ resume: resume, interests: interests })
+            })
+            .then(response => response.json())
+            .then(data => {
+                // Redirecionar para a página de resultados ou atualizar a página atual
+                // Exemplo simples:
+                localStorage.setItem('recommendations', JSON.stringify(data.results));
+                window.location.href = '/results';
+            });
+        });
+    </script>    
+</body>
+</html>

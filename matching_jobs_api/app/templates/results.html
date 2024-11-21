@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Vagas Recomendadas</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Vagas Recomendadas</h1>
+    <ul id="jobs-list">
+        <!-- As vagas serão inseridas aqui via JavaScript -->
+    </ul>
+    <a href="{{ url_for('index_bp.index') }}">Voltar</a>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const jobs = JSON.parse(localStorage.getItem('recommendations'));
+            const jobsList = document.getElementById('jobs-list');
+
+            jobs.forEach(function(job) {
+                const li = document.createElement('li');
+                const shortDescription = job.job_description.slice(0, 200);
+                const isTruncated = job.job_description.length > 200;
+
+                li.innerHTML = `
+                    <h2>${job.job_title}</h2>
+                    <p><strong>Local:</strong> ${job.location}</p>
+                    <p>
+                        <strong>Descrição:</strong> 
+                        <span class="job-desc">${shortDescription}</span>
+                        ${isTruncated ? '...' : ''}
+                        ${isTruncated ? '<button class="toggle-desc">Show More</button>' : ''}
+                    </p>
+                    <a href="${job.url}" target="_blank">Ver mais</a>
+                `;
+
+                const toggleButton = li.querySelector('.toggle-desc');
+                if (toggleButton) {
+                    toggleButton.addEventListener('click', function() {
+                        const descSpan = li.querySelector('.job-desc');
+                        if (toggleButton.textContent === 'Show More') {
+                            descSpan.textContent = job.job_description;
+                            toggleButton.textContent = 'Show Less';
+                        } else {
+                            descSpan.textContent = shortDescription;
+                            toggleButton.textContent = 'Show More';
+                        }
+                    });
+                }
+
+                jobsList.appendChild(li);
+            });
+        });
+    </script>
+</body>
+</html>
