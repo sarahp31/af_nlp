@@ -20,7 +20,7 @@ def query():
     data_request = request.get_json()
     resume_text = data_request.get("resume")
     personal_interests = data_request.get("interests")
-    threshold = data_request.get("threshold", 0.33)
+    threshold = data_request.get("threshold", 0.20)
     top_n = data_request.get("top_n", 3500)
 
     # Obter o embedding do perfil do usuário
