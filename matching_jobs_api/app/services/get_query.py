@@ -190,7 +190,6 @@ def get_recommendations(user_embedding, threshold=0.33, top_n=3500, max_jobs_per
     if len(indices) == 0:
         return []
 
-    # Prepare the results with company diversity
     results = []
     company_count = {}  # Track the number of jobs added per company
     selected_similarities = {}  # Track last similarity for each company
@@ -206,7 +205,6 @@ def get_recommendations(user_embedding, threshold=0.33, top_n=3500, max_jobs_per
         if company in selected_similarities and abs(sim - selected_similarities[company]) < min_similarity_diff:
             continue
 
-        # Add job to results
         job = {
             "job_id": data["job_id"][idx],
             "job_title": data["job_title"][idx],
