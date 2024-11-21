@@ -45,7 +45,7 @@ The application demonstrates:
 These results confirm the solution's ability to effectively meet user needs and improve job search experiences.
 
 ## Next Steps
-Expand the number of partner companies to diversify the job types in the database. This will enable the platform to cater to a broader audience and offer opportunities across various industries and career levels.
+Expand the number of partner companies to diversify the job types in the database. This will enable the platform to serve a broader audience and provide opportunities across various industries and career levels.
 
 ## References
 Alonso, R., Dessí, D., Meloni, A., & Recupero, D. R. (2023). *A General and NLP-based Architecture to Perform Recommendation: A Use Case for Online Job Search and Skills Acquisition*.
