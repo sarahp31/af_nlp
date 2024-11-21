@@ -156,7 +156,7 @@ def get_user_profile_embedding(resume_text, personal_interests, alpha=0.6, beta=
     )
     return user_embedding
 
-def get_recommendations(user_embedding, threshold=0.33, top_n=500, max_jobs_per_company=20, min_similarity_diff=0.05):
+def get_recommendations(user_embedding, threshold=0.33, top_n=500, max_jobs_per_company=20, min_similarity_diff=0.005):
     """
     Adiciona um filtro para evitar jobs muito semelhantes dentro da mesma empresa.
     """
