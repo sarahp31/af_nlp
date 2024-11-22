@@ -34,6 +34,8 @@ Our results were mensured testing the solution with people and getting feedback 
 
 - [Rafael - Video](https://drive.google.com/file/d/1LhZdm0ofP_RqvrrrKxN0KFb0NQqQeZCm/view?usp=sharing)
 
+- [Bruno - Video](https://drive.google.com/file/d/1JRHsEH5HhpO2UKVX1ETTnjvi45w3DD1h/view?usp=drive_link)
+
 ## Functionalities of the Application
 
    - **Web server** 
