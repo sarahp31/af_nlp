@@ -28,13 +28,13 @@ Our results were mensured testing the solution with people and getting feedback 
 
 - [Breno Quessie - Video](https://drive.google.com/file/d/1BlzPo7iqxsY5GG2iwZeKbRKUZNTFxwDo/view?usp=sharing)
 
-- [Sarah Pimenta - Video](https://drive.google.com/file/d/1BLEnBxTncbwb5g0GMDO3aT-PZVIGk6d2/view?usp=sharing)
-
-- [Ellen - Video](https://drive.google.com/file/d/1kaymb4ZgCnmnQInh-O_g-tccPRPf_BwH/view?usp=sharing)
+- [Bruno Sanches - Video](https://drive.google.com/file/d/1JRHsEH5HhpO2UKVX1ETTnjvi45w3DD1h/view?usp=drive_link)
 
 - [Rafael - Video](https://drive.google.com/file/d/1LhZdm0ofP_RqvrrrKxN0KFb0NQqQeZCm/view?usp=sharing)
 
-- [Bruno - Video](https://drive.google.com/file/d/1JRHsEH5HhpO2UKVX1ETTnjvi45w3DD1h/view?usp=drive_link)
+- [Sarah Pimenta - Video](https://drive.google.com/file/d/1BLEnBxTncbwb5g0GMDO3aT-PZVIGk6d2/view?usp=sharing)
+
+- [Ellen - Video](https://drive.google.com/file/d/1kaymb4ZgCnmnQInh-O_g-tccPRPf_BwH/view?usp=sharing)
 
 ## Functionalities of the Application
 
