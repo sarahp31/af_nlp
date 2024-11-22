@@ -30,6 +30,8 @@ Our results were mensured testing the solution with people and getting feedback 
 
 - [Sarah Pimenta - Video](https://drive.google.com/file/d/1BLEnBxTncbwb5g0GMDO3aT-PZVIGk6d2/view?usp=sharing)
 
+- [Ellen - Video](https://drive.google.com/file/d/1kaymb4ZgCnmnQInh-O_g-tccPRPf_BwH/view?usp=sharing)
+
 ## Next Steps
 - Expand the number of partner companies to diversify the job types in the database. This will enable the platform to serve a broader audience and provide opportunities across various industries and career levels.
 
