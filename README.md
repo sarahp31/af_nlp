@@ -34,6 +34,13 @@ Our results were mensured testing the solution with people and getting feedback 
 
 - [Rafael - Video](https://drive.google.com/file/d/1LhZdm0ofP_RqvrrrKxN0KFb0NQqQeZCm/view?usp=sharing)
 
+## Functionalities of the Application
+
+   - **Web server** 
+      - **Input:** Client's résumé and interests
+      - **Output:** List of all job openings that match the client's profile 
+
+
 ## Next Steps
 - Expand the number of partner companies to diversify the job types in the database. This will enable the platform to serve a broader audience and provide opportunities across various industries and career levels.
 
