@@ -1,6 +1,6 @@
 import logging
 from flask import Blueprint, render_template, request, jsonify
-from app.services.get_query import get_user_profile_embedding, get_recommendations
+from matching_jobs_api.app.services.get_recommendations import get_user_profile_embedding, get_recommendations
 # from app.services.get_recommendations import get_recommentations_service
 
 logger = logging.getLogger(__name__)
