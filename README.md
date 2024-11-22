@@ -37,7 +37,7 @@ Our results were mensured testing the solution with people and getting feedback 
 ## Functionalities of the Application
 
    - **Web server** 
-      - **Input:** Client's résumé and interests
+      - **Input:** Client's resume and interests
       - **Output:** List of all job openings that match the client's profile 
 
 
