@@ -1,51 +1,42 @@
 # Job Matching Enhancement using Dynamic Recommendations
 
-Link para o site: http://54.82.18.196:5000/
+## Live Demo
+
+You can test the live demo of our job matching enhancement system using the following link:
+
+[Link to Demo Test](http://54.82.18.196:5000/)
+
+**Note:** The API is hosted on an AWS EC2 instance, so it may take a few seconds to respond.
+
+**Pitch:** https://drive.google.com/file/d/17Oa2dHjgnuJ22qGp-8Wljsx2_EM52q3p/view?usp=sharing
 
 ## Introduction to the Problem and Context
 Finding job opportunities that align with candidates' profiles is a significant challenge. Traditional systems rely heavily on keyword matching and explicit job descriptions, which limits the discovery of relevant job openings. This creates inefficiencies and missed opportunities in the job market. Enhancing the matching process can connect candidates with new and unexpected opportunities, improving both individual career growth and market efficiency.
 
 ## Review of Existing Solutions
-A study by **Alonso et al. (2023)** presents a recommendation architecture integrating NLP and machine learning modules to analyze and classify candidate profiles based on required skills for various positions. Their model includes:
-- An **interface** for collecting candidate information.
-- A **database** for storing occupation descriptors.
-- A **text extractor** to identify relevant terms in resumes.
-- A **transformer-based module** to convert text into vectors.
-- A **scoring module** to rank candidates by profile-job similarity.
 
-However, this approach depends on structured and predefined descriptors, limiting its flexibility in dynamic and complex domains. 
-
-### Proposed Solution's Advantages
-Our proposed solution addresses these limitations by enabling **dynamic and adaptable recommendations**, creating a more flexible and personalized job matching process.
+The study by Alonso et al. (2023) presents a recommendation architecture that integrates NLP and machine learning modules to analyze and classify candidate profiles based on the skills required for different positions. The model employs specific components: an interface for information collection, a database to store occupation descriptors, a text extractor that identifies relevant terms in resumes, a transformer-based module to convert text into vectors, and a scoring module to rank candidates based on the similarity between their profiles and job openings. However, this approach faces limitations due to its reliance on structured and predefined descriptors, restricting its application in domains that demand greater flexibility. My solution addresses this limitation by enabling more dynamic and adaptable recommendations.
 
 ## Proposed Solution
-This solution includes:
-1. **Frontend Interface**: 
-   - Users submit their resumes and specify career interests.
-   
-2. **Prompt-based Suggestions**:
-   - User input is sent to a GPT-based API, which generates career suggestions tailored to the profile and interests.
-
-3. **Vector Space Representation**:
-   - Both the user's resume and the suggested careers are represented in a **vector space**, with higher weights assigned to user interests.
-
-4. **Comparison and Evaluation**:
-   - Profiles and job openings in the database are compared using this representation to evaluate alignment.
-
-### Key Benefits
-- Recommends **non-obvious opportunities** aligned with the user’s profile.
-- Incorporates user preferences dynamically.
-- Improves the discoverability of new and relevant job opportunities.
+The solution consists of a frontend where users provide their resumes and interests. This information is sent to a prompt that uses the GPT API to generate career suggestions based on the user’s profile and preferences. From this response, both the suggested careers and the user’s resume are represented in a vector space, with greater weight assigned to the user’s interests. This representation allows for comparison and evaluation of the alignment between the user’s profile and the available job openings in the database. As a result, we can recommend opportunities that, while not immediately obvious, are highly aligned with the user’s profile and goals.
 
 ## Results and Impact Metrics
-The application demonstrates:
-- **Quantitative Results**: (Insert metrics such as improved job match rates, reduced search time, etc.)
-- **Qualitative Feedback**: (Include user testimonials highlighting the value and relevance of recommendations.)
 
-These results confirm the solution's ability to effectively meet user needs and improve job search experiences.
+Our results were mensured testing the solution with people and getting feedback from them. The feedback was positive, and the users were able to find job opportunities that they would not have found otherwise. Videos and testimonials below:
+
+- [Drive with the feedbacks](https://drive.google.com/drive/folders/1g3lcXIaqWC_K5QNyEq7VCAdRrG5MwpyL?usp=sharing)
+
+- [Breno Quessie - Video](https://drive.google.com/file/d/1BlzPo7iqxsY5GG2iwZeKbRKUZNTFxwDo/view?usp=sharing)
+
 
 ## Next Steps
-Expand the number of partner companies to diversify the job types in the database. This will enable the platform to serve a broader audience and provide opportunities across various industries and career levels.
+- Expand the number of partner companies to diversify the job types in the database. This will enable the platform to serve a broader audience and provide opportunities across various industries and career levels.
+
+- Accept PDF files as input to enhance user convenience and accessibility.
+
+- Implement a feedback system to refine recommendations based on user interactions and preferences.
+
+- Integrate a chatbot feature to provide real-time assistance and guidance to users during the job search process.
 
 ## References
 Alonso, R., Dessí, D., Meloni, A., & Recupero, D. R. (2023). *A General and NLP-based Architecture to Perform Recommendation: A Use Case for Online Job Search and Skills Acquisition*.
