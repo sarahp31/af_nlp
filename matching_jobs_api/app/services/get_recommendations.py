@@ -226,6 +226,9 @@ def get_recommendations(user_embedding, threshold=0.20, top_n=3500, max_jobs_per
     end_time = time.time()
     logger.info("Query processed in %.2f seconds.", end_time - start_time)
 
+    # order by similarity
+    results = sorted(results, key=lambda x: x["similarity"], reverse=True)
+
     return {
         "time_taken": end_time - start_time,
         "message": "OK",
